@@ -1,3 +1,10 @@
+pub mod config;
+pub mod project;
+pub mod profile;
+pub mod skill;
+pub mod permission;
+pub mod quick_command;
+
 use serde::{Deserialize, Serialize};
 use chrono::{DateTime, Utc};
 use uuid::Uuid;
