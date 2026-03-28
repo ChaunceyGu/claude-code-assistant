@@ -2,9 +2,9 @@ name: Build Claude Code Assistant
 
 on:
   push:
-    branches: [ main, master ]
+    branches: [ main, master, feature/claude-assistant ]
   pull_request:
-    branches: [ main, master ]
+    branches: [ main, master, feature/claude-assistant ]
   workflow_dispatch:  # 允许手动触发
 
 jobs:
