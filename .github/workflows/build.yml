@@ -26,8 +26,8 @@ jobs:
       with:
         node-version: '20'
 
-    - name: Install Tauri CLI
-      run: cargo install tauri-cli --locked
+    - name: Install Tauri CLI v1
+      run: cargo install tauri-cli --version "^1.0" --locked
 
     - name: Build Tauri Application
       run: cargo tauri build
