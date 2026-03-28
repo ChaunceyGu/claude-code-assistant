@@ -29,6 +29,14 @@ jobs:
     - name: Install Tauri CLI v1
       run: cargo install tauri-cli --version "^1.0" --locked
 
+    - name: Install frontend dependencies
+      run: npm install
+      working-directory: ./src-ui
+
+    - name: Build frontend
+      run: npm run build
+      working-directory: ./src-ui
+
     - name: Build Tauri Application
       run: cargo tauri build
       env:
