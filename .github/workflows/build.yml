@@ -1,11 +1,13 @@
-name: Build Claude Code Assistant
+name: Build and Release
 
 on:
   push:
-    branches: [ main, master, feature/claude-assistant ]
+    branches: [ main, master ]
+    tags:
+      - 'v*'
   pull_request:
-    branches: [ main, master, feature/claude-assistant ]
-  workflow_dispatch:  # 允许手动触发
+    branches: [ main, master ]
+  workflow_dispatch:
 
 jobs:
   build-windows:
